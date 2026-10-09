@@ -53,17 +53,25 @@ html.text-size-lg {
 }
 
 /* Sections and main containers */
-.dark section.bg-white,
-.dark section[class*="bg-white"] {
+.dark section {
   background-color: #1f1e1d !important;
   border-color: #383835 !important;
 }
 
-/* Base Cards & elevated surfaces */
+/* Specific sections that may have gradients or light backgrounds */
+.dark section[class*="from-"],
+.dark section[class*="bg-"] {
+  background-image: none !important;
+  background-color: #1f1e1d !important;
+}
+
+/* Base Cards & elevated surfaces - Claude Dark tone */
 .dark .bg-white,
 .dark [class*="bg-white/"],
-.dark [class*="bg-white"] {
-  background-color: #272725 !important;
+.dark [class*="bg-white"],
+.dark [class*="bg-\\[\\#fbfcfb\\]"],
+.dark [class*="bg-\\[\\#f5f7f6\\]"] {
+  background-color: #262624 !important;
   color: #f5f5f4;
 }
 
@@ -72,21 +80,21 @@ html.text-size-lg {
 .dark [class*="bg-stone-50"],
 .dark .bg-stone-100,
 .dark [class*="bg-stone-100"] {
-  background-color: #2e2e2b !important;
+  background-color: #2b2a27 !important;
 }
 
-/* Inputs and interactive boxes */
+/* Inputs and interactive form elements */
 .dark input,
 .dark textarea,
 .dark select {
-  background-color: #262624 !important;
-  color: #f5f5f4 !important;
+  background-color: #1e1e1c !important;
+  color: #fcfcfb !important;
   border-color: #444440 !important;
 }
 
 .dark input::placeholder,
 .dark textarea::placeholder {
-  color: #9d9c98 !important;
+  color: #a3a29d !important;
 }
 
 /* TYPOGRAPHY CONTRAST IN DARK MODE - Maximum clarity */
@@ -104,7 +112,7 @@ html.text-size-lg {
 /* Primary text & titles that used deep green in light mode */
 .dark .text-\[\#1b3731\],
 .dark .text-\[\#2d524a\] {
-  color: #f2ede4 !important;
+  color: #f4ede2 !important;
 }
 
 /* Secondary body copy, descriptions and paragraphs */
@@ -114,7 +122,7 @@ html.text-size-lg {
 .dark span.text-stone-600,
 .dark p.text-stone-600,
 .dark p.text-stone-700 {
-  color: #d8d7d4 !important;
+  color: #d8d7d2 !important;
 }
 
 /* Tertiary text, captions and helper notes */
@@ -122,7 +130,7 @@ html.text-size-lg {
 .dark span.text-stone-500,
 .dark p.text-stone-500,
 .dark .text-stone-400 {
-  color: #b0afa9 !important;
+  color: #b5b4ad !important;
 }
 
 /* Accents and brand gold in dark mode */
@@ -130,6 +138,21 @@ html.text-size-lg {
 .dark .text-\[\#c5a059\],
 .dark .text-\[\#8c6b27\] {
   color: #dfc17b !important;
+}
+
+/* Keep dark text on gold buttons and badges so they are always 100% legible */
+.dark [class*="bg-\\[\\#c5a059\\]"],
+.dark [class*="bg-\\[\\#dfc17b\\]"],
+.dark button[class*="bg-\\[\\#c5a059\\]"],
+.dark a[class*="bg-\\[\\#c5a059\\]"],
+.dark button[class*="bg-\\[\\#dfc17b\\]"],
+.dark a[class*="bg-\\[\\#dfc17b\\]"] {
+  color: #162420 !important;
+}
+
+.dark [class*="bg-\\[\\#c5a059\\]"] *,
+.dark [class*="bg-\\[\\#dfc17b\\]"] * {
+  color: #162420 !important;
 }
 
 /* Icon badges with dark background */
@@ -152,12 +175,12 @@ html.text-size-lg {
 .dark .border-stone-300,
 .dark [class*="border-stone-300"],
 .dark .border-stone-100 {
-  border-color: #3c3c39 !important;
+  border-color: #383835 !important;
 }
 
 /* Sticky Header and Mobile Bottom Navigation */
 .dark header {
-  background-color: rgba(31, 30, 29, 0.94) !important;
+  background-color: rgba(31, 30, 29, 0.95) !important;
   border-color: #383835 !important;
 }
 

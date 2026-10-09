@@ -8,12 +8,12 @@ export const MapLocation: React.FC = () => {
   const wazeUrl = `https://waze.com/ul?q=${encodeURIComponent(address)}`;
 
   return (
-    <section id="localizacao" className="bg-white border-b border-stone-200">
+    <section id="localizacao" className="bg-white dark:bg-[#1f1e1d] border-b border-stone-200 dark:border-[#383835]">
       {/* Map Bar Header with GEO context */}
-      <div className="bg-[#1b3731] text-white py-5 px-4 sm:px-8 border-t border-[#2d524a]/80">
+      <div className="bg-[#1b3731] dark:bg-[#182b26] text-white py-5 px-4 sm:px-8 border-t border-[#2d524a]/80 dark:border-[#2d524a]/40">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-5">
           <div className="flex items-start sm:items-center gap-3.5 text-center sm:text-left">
-            <div className="p-3 bg-white/10 rounded-2xl text-[#dfc17b] shrink-0 mt-0.5 sm:mt-0">
+            <div className="p-3 bg-white/10 dark:bg-white/5 rounded-2xl text-[#dfc17b] shrink-0 mt-0.5 sm:mt-0">
               <MapPin className="w-5 h-5" />
             </div>
             <div>
@@ -36,9 +36,9 @@ export const MapLocation: React.FC = () => {
               href={googleMapsShortUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white text-[#1b3731] hover:bg-stone-100 font-bold text-xs transition-all shadow-xs hover:shadow-md hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white dark:bg-[#262624] text-[#1b3731] dark:text-[#f5f5f4] hover:bg-stone-100 dark:hover:bg-[#2e2e2b] border border-transparent dark:border-[#383835] font-bold text-xs transition-all shadow-xs hover:shadow-md hover:-translate-y-0.5"
             >
-              <ExternalLink className="w-3.5 h-3.5 text-[#a9853e]" />
+              <ExternalLink className="w-3.5 h-3.5 text-[#a9853e] dark:text-[#dfc17b]" />
               <span>Abrir no Google Maps</span>
             </a>
             <a
@@ -55,7 +55,7 @@ export const MapLocation: React.FC = () => {
       </div>
 
       {/* Embedded Google Maps with responsive frame */}
-      <div className="w-full h-80 sm:h-96 relative bg-stone-100">
+      <div className="w-full h-80 sm:h-96 relative bg-stone-100 dark:bg-[#1a1918]">
         <iframe
           title="Mapa de Localização do Escritório Dra. Aline Calves Advocacia em Praia Grande SP"
           src="https://maps.google.com/maps?q=Av.+J%C3%BAlio+Prestes+de+Albuquerque,+444,+Nova+Mirim,+Praia+Grande+-+SP&t=&z=16&ie=UTF8&iwloc=&output=embed"
@@ -68,19 +68,19 @@ export const MapLocation: React.FC = () => {
         />
 
         {/* Floating Quick Action Card on Map */}
-        <div className="absolute bottom-4 left-4 sm:left-8 bg-white/95 backdrop-blur-md p-3.5 sm:p-4 rounded-2xl shadow-lg border border-stone-200/90 max-w-xs hidden sm:block">
-          <p className="text-xs font-bold text-[#1b3731] flex items-center gap-1.5">
-            <ShieldCheck className="w-4 h-4 text-[#a9853e]" />
+        <div className="absolute bottom-4 left-4 sm:left-8 bg-white/95 dark:bg-[#20201e]/95 backdrop-blur-md p-3.5 sm:p-4 rounded-2xl shadow-lg border border-stone-200/90 dark:border-[#383835] max-w-xs hidden sm:block">
+          <p className="text-xs font-bold text-[#1b3731] dark:text-[#fcfcfb] flex items-center gap-1.5">
+            <ShieldCheck className="w-4 h-4 text-[#a9853e] dark:text-[#dfc17b]" />
             Aline Calves Advocacia
           </p>
-          <p className="text-[11px] text-stone-600 mt-1 leading-snug">
+          <p className="text-[11px] text-stone-600 dark:text-[#b0afa9] mt-1 leading-snug">
             Fácil acesso pela Via Expressa Sul e Rodovia Padre Manoel da Nóbrega. Estacionamento nas proximidades.
           </p>
           <a
             href={googleMapsShortUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-[11px] font-bold text-[#a9853e] hover:text-[#1b3731] mt-2 transition-colors"
+            className="inline-flex items-center gap-1 text-[11px] font-bold text-[#a9853e] dark:text-[#dfc17b] hover:text-[#1b3731] dark:hover:text-white mt-2 transition-colors"
           >
             <span>Ver no Google Maps</span>
             <ExternalLink className="w-3 h-3" />

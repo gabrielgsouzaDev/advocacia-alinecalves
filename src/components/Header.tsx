@@ -36,7 +36,7 @@ export const Header: React.FC = () => {
       </div>
 
       {/* Main navigation header */}
-      <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-stone-200/90 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.04)] transition-all">
+      <header className="sticky top-0 z-40 bg-white/90 dark:bg-[#1f1e1d]/95 backdrop-blur-md border-b border-stone-200/90 dark:border-[#383835] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.04)] dark:shadow-[0_2px_15px_-3px_rgba(0,0,0,0.4)] transition-all">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Brand Logo & Name */}

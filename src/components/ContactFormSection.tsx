@@ -39,7 +39,7 @@ export const ContactFormSection: React.FC = () => {
   };
 
   return (
-    <section id="contato" className="py-20 lg:py-28 bg-[#fbfcfb] border-b border-stone-200">
+    <section id="contato" className="py-20 lg:py-28 bg-[#fbfcfb] dark:bg-[#1f1e1d] border-b border-stone-200 dark:border-[#383835]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
@@ -47,13 +47,13 @@ export const ContactFormSection: React.FC = () => {
           {/* Left Column: Contact details & Location */}
           <div className="lg:col-span-5 space-y-6">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#a9853e]">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#a9853e] dark:text-[#dfc17b]">
                 Canal Direto de Atendimento
               </span>
-              <h2 className="text-3xl sm:text-4xl font-black text-[#1b3731] tracking-tight mt-1.5">
+              <h2 className="text-3xl sm:text-4xl font-black text-[#1b3731] dark:text-[#fcfcfb] tracking-tight mt-1.5">
                 Consulte uma especialista
               </h2>
-              <p className="text-stone-600 text-sm sm:text-base mt-2 leading-relaxed">
+              <p className="text-stone-600 dark:text-[#b0afa9] text-sm sm:text-base mt-2 leading-relaxed">
                 Estamos prontos para atender você com rigor técnico, absoluto sigilo profissional e a transparência que seu caso exige.
               </p>
             </div>
@@ -67,17 +67,17 @@ export const ContactFormSection: React.FC = () => {
                 href="https://api.whatsapp.com/send?phone=5513996677007&text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20consulta."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-5 sm:p-6 rounded-3xl bg-white border border-stone-200 shadow-xs hover:border-[#1b3731] hover:shadow-md transition-all flex items-center gap-4 group"
+                className="p-5 sm:p-6 rounded-3xl bg-white dark:bg-[#262624] border border-stone-200 dark:border-[#383835] shadow-xs hover:border-[#1b3731] dark:hover:border-[#dfc17b] hover:shadow-md transition-all flex items-center gap-4 group"
               >
-                <div className="p-3.5 rounded-2xl bg-[#1b3731]/10 text-[#1b3731] group-hover:bg-[#1b3731] group-hover:text-white transition-colors">
+                <div className="p-3.5 rounded-2xl bg-[#1b3731]/10 dark:bg-[#dfc17b]/15 text-[#1b3731] dark:text-[#dfc17b] group-hover:bg-[#1b3731] group-hover:text-white transition-colors">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold text-stone-500 uppercase tracking-wider">Telefone & WhatsApp 24h</p>
-                  <p className="text-xl font-extrabold text-[#1b3731] tracking-tight font-mono">
+                  <p className="text-xs font-semibold text-stone-500 dark:text-stone-400 uppercase tracking-wider">Telefone & WhatsApp 24h</p>
+                  <p className="text-xl font-extrabold text-[#1b3731] dark:text-[#fcfcfb] tracking-tight font-mono">
                     (13) 99667-7007
                   </p>
-                  <p className="text-xs text-emerald-600 font-medium mt-0.5 flex items-center gap-1.5">
+                  <p className="text-xs text-emerald-600 dark:text-emerald-400 font-medium mt-0.5 flex items-center gap-1.5">
                     <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-pulse" />
                     Atendimento imediato online disponível
                   </p>
@@ -89,20 +89,20 @@ export const ContactFormSection: React.FC = () => {
                 href="https://maps.app.goo.gl/pJVzdfqF2guKdSyh8"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-5 sm:p-6 rounded-3xl bg-white border border-stone-200 shadow-xs hover:border-[#1b3731] hover:shadow-md transition-all flex items-start gap-4 group cursor-pointer block"
+                className="p-5 sm:p-6 rounded-3xl bg-white dark:bg-[#262624] border border-stone-200 dark:border-[#383835] shadow-xs hover:border-[#1b3731] dark:hover:border-[#dfc17b] hover:shadow-md transition-all flex items-start gap-4 group cursor-pointer block"
               >
-                <div className="p-3.5 rounded-2xl bg-[#c5a059]/15 text-[#8c6b27] group-hover:bg-[#1b3731] group-hover:text-white transition-colors shrink-0 mt-0.5">
+                <div className="p-3.5 rounded-2xl bg-[#c5a059]/15 dark:bg-[#dfc17b]/15 text-[#8c6b27] dark:text-[#dfc17b] group-hover:bg-[#1b3731] group-hover:text-white transition-colors shrink-0 mt-0.5">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold text-stone-500 uppercase tracking-wider">Endereço do Escritório</p>
-                  <p className="text-sm sm:text-base font-bold text-stone-900 group-hover:text-[#1b3731] transition-colors leading-snug mt-0.5">
+                  <p className="text-xs font-semibold text-stone-500 dark:text-stone-400 uppercase tracking-wider">Endereço do Escritório</p>
+                  <p className="text-sm sm:text-base font-bold text-stone-900 dark:text-[#fcfcfb] group-hover:text-[#1b3731] dark:group-hover:text-[#dfc17b] transition-colors leading-snug mt-0.5">
                     Av. Júlio Prestes de Albuquerque, 444
                   </p>
-                  <p className="text-xs text-stone-600 mt-0.5">
+                  <p className="text-xs text-stone-600 dark:text-[#b0afa9] mt-0.5">
                     Nova Mirim, Praia Grande/SP · CEP 11717-110
                   </p>
-                  <div className="mt-3 flex items-center gap-1.5 text-[11px] font-bold text-[#1b3731] group-hover:text-[#a9853e] transition-colors">
+                  <div className="mt-3 flex items-center gap-1.5 text-[11px] font-bold text-[#1b3731] dark:text-[#dfc17b] group-hover:text-[#a9853e] transition-colors">
                     <span>Abrir rota no Google Maps</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -110,9 +110,9 @@ export const ContactFormSection: React.FC = () => {
               </a>
 
               {/* Horário & Âmbito */}
-              <div className="p-4 rounded-2xl bg-[#1b3731]/5 border border-[#1b3731]/10 space-y-1.5 text-xs text-stone-700">
-                <div className="flex items-center gap-2 font-bold text-[#1b3731]">
-                  <Clock className="w-4 h-4 text-[#c5a059]" /> Plantão 24h em Casos Urgentes
+              <div className="p-4 rounded-2xl bg-[#1b3731]/5 dark:bg-[#262624] border border-[#1b3731]/10 dark:border-[#383835] space-y-1.5 text-xs text-stone-700 dark:text-[#d8d7d4]">
+                <div className="flex items-center gap-2 font-bold text-[#1b3731] dark:text-[#dfc17b]">
+                  <Clock className="w-4 h-4 text-[#c5a059] dark:text-[#dfc17b]" /> Plantão 24h em Casos Urgentes
                 </div>
                 <p>
                   Atendimentos presenciais com agendamento prévio. Consultas virtuais diárias para clientes de qualquer localidade do Brasil.
@@ -124,15 +124,15 @@ export const ContactFormSection: React.FC = () => {
 
           {/* Right Column: Lead Form */}
           <div className="lg:col-span-7">
-            <div className="bg-white rounded-3xl p-6 sm:p-9 border border-stone-200 shadow-[0_15px_35px_-10px_rgba(27,55,49,0.06)]">
-              <div className="mb-6 pb-4 border-b border-stone-100">
-                <h3 className="text-2xl font-extrabold text-[#1b3731] leading-tight">
+            <div className="bg-white dark:bg-[#262624] rounded-3xl p-6 sm:p-9 border border-stone-200 dark:border-[#383835] shadow-[0_15px_35px_-10px_rgba(27,55,49,0.06)] dark:shadow-[0_15px_35px_-10px_rgba(0,0,0,0.3)]">
+              <div className="mb-6 pb-4 border-b border-stone-100 dark:border-[#383835]">
+                <h3 className="text-2xl font-extrabold text-[#1b3731] dark:text-[#fcfcfb] leading-tight">
                   Dúvidas?
                 </h3>
-                <p className="text-base font-semibold text-stone-800">
+                <p className="text-base font-semibold text-stone-800 dark:text-[#f5f5f4]">
                   Preencha o Formulário de Contato
                 </p>
-                <p className="text-xs text-stone-500 mt-1">
+                <p className="text-xs text-stone-500 dark:text-[#b0afa9] mt-1">
                   Nossa equipe jurídica responderá com brevidade e sob estrito sigilo ético.
                 </p>
               </div>
@@ -144,11 +144,11 @@ export const ContactFormSection: React.FC = () => {
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.95 }}
-                    className="p-8 rounded-2xl bg-emerald-50/80 border border-emerald-200 text-center space-y-4"
+                    className="p-8 rounded-2xl bg-emerald-50/80 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 text-center space-y-4"
                   >
-                    <CheckCircle className="w-12 h-12 text-emerald-600 mx-auto" />
-                    <h4 className="text-xl font-bold text-emerald-950">Mensagem Encaminhada!</h4>
-                    <p className="text-xs sm:text-sm text-emerald-800 max-w-md mx-auto leading-relaxed">
+                    <CheckCircle className="w-12 h-12 text-emerald-600 dark:text-emerald-400 mx-auto" />
+                    <h4 className="text-xl font-bold text-emerald-950 dark:text-emerald-200">Mensagem Encaminhada!</h4>
+                    <p className="text-xs sm:text-sm text-emerald-800 dark:text-emerald-300 max-w-md mx-auto leading-relaxed">
                       Você foi redirecionado para o WhatsApp da Dra. Aline Souza Calves. Caso a conversa não tenha aberto automaticamente, clique no botão abaixo para prosseguir.
                     </p>
                     <div className="pt-2">
@@ -168,7 +168,7 @@ export const ContactFormSection: React.FC = () => {
                         setSubmitted(false);
                         setFormData({ name: '', phone: '', area: 'Direito Geral', message: '' });
                       }}
-                      className="text-xs text-stone-500 hover:text-stone-800 underline block mx-auto pt-2 cursor-pointer"
+                      className="text-xs text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-white underline block mx-auto pt-2 cursor-pointer"
                     >
                       Enviar outra mensagem
                     </button>
@@ -176,7 +176,7 @@ export const ContactFormSection: React.FC = () => {
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
-                      <label className="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5">
+                      <label className="block text-xs font-bold text-stone-700 dark:text-stone-300 uppercase tracking-wider mb-1.5">
                         NOME COMPLETO*
                       </label>
                       <input
@@ -185,13 +185,13 @@ export const ContactFormSection: React.FC = () => {
                         placeholder="Ex: Carlos Eduardo de Souza"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-4 py-3.5 bg-stone-50/70 border border-stone-300 rounded-xl text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-[#1b3731] focus:bg-white transition-all shadow-2xs"
+                        className="w-full px-4 py-3.5 bg-stone-50/70 dark:bg-[#1a1918] border border-stone-300 dark:border-[#444440] rounded-xl text-sm text-stone-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#1b3731] dark:focus:ring-[#dfc17b] focus:bg-white dark:focus:bg-[#1a1918] transition-all shadow-2xs"
                       />
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5">
+                        <label className="block text-xs font-bold text-stone-700 dark:text-stone-300 uppercase tracking-wider mb-1.5">
                           WHATSAPP DE CONTATO*
                         </label>
                         <input
@@ -200,18 +200,18 @@ export const ContactFormSection: React.FC = () => {
                           placeholder="(13) 99999-9999"
                           value={formData.phone}
                           onChange={handlePhoneChange}
-                          className="w-full px-4 py-3.5 bg-stone-50/70 border border-stone-300 rounded-xl text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-[#1b3731] focus:bg-white transition-all font-mono shadow-2xs"
+                          className="w-full px-4 py-3.5 bg-stone-50/70 dark:bg-[#1a1918] border border-stone-300 dark:border-[#444440] rounded-xl text-sm text-stone-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#1b3731] dark:focus:ring-[#dfc17b] focus:bg-white dark:focus:bg-[#1a1918] transition-all font-mono shadow-2xs"
                         />
                       </div>
 
                       <div>
-                        <label className="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5">
+                        <label className="block text-xs font-bold text-stone-700 dark:text-stone-300 uppercase tracking-wider mb-1.5">
                           ÁREA DO SEU CASO
                         </label>
                         <select
                           value={formData.area}
                           onChange={(e) => setFormData({ ...formData, area: e.target.value })}
-                          className="w-full px-4 py-3.5 bg-stone-50/70 border border-stone-300 rounded-xl text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-[#1b3731] focus:bg-white transition-all shadow-2xs"
+                          className="w-full px-4 py-3.5 bg-stone-50/70 dark:bg-[#1a1918] border border-stone-300 dark:border-[#444440] rounded-xl text-sm text-stone-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#1b3731] dark:focus:ring-[#dfc17b] focus:bg-white dark:focus:bg-[#1a1918] transition-all shadow-2xs"
                         >
                           <option value="Direito Imobiliário">Direito Imobiliário</option>
                           <option value="Direito Previdenciário / INSS">Direito Previdenciário (INSS)</option>
@@ -228,7 +228,7 @@ export const ContactFormSection: React.FC = () => {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5">
+                      <label className="block text-xs font-bold text-stone-700 dark:text-stone-300 uppercase tracking-wider mb-1.5">
                         DESCREVA RESUMIDAMENTE SUA DÚVIDA*
                       </label>
                       <textarea
@@ -237,7 +237,7 @@ export const ContactFormSection: React.FC = () => {
                         placeholder="Explique o que aconteceu ou qual documento deseja analisar..."
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full px-4 py-3.5 bg-stone-50/70 border border-stone-300 rounded-xl text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-[#1b3731] focus:bg-white transition-all resize-none shadow-2xs"
+                        className="w-full px-4 py-3.5 bg-stone-50/70 dark:bg-[#1a1918] border border-stone-300 dark:border-[#444440] rounded-xl text-sm text-stone-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#1b3731] dark:focus:ring-[#dfc17b] focus:bg-white dark:focus:bg-[#1a1918] transition-all resize-none shadow-2xs"
                       />
                     </div>
 
@@ -246,13 +246,13 @@ export const ContactFormSection: React.FC = () => {
                         whileHover={{ y: -2 }}
                         whileTap={{ y: 0 }}
                         type="submit"
-                        className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-[#1b3731] hover:bg-[#2d524a] text-white font-extrabold text-sm sm:text-base uppercase tracking-wider transition-all shadow-md hover:shadow-lg cursor-pointer"
+                        className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-[#1b3731] dark:bg-[#2d524a] hover:bg-[#2d524a] dark:hover:bg-[#3d6b61] text-white font-extrabold text-sm sm:text-base uppercase tracking-wider transition-all shadow-md hover:shadow-lg cursor-pointer"
                       >
                         <Send className="w-4 h-4 text-[#dfc17b]" />
                         <span>Enviar Mensagem para o Escritório</span>
                       </motion.button>
-                      <p className="text-[11px] text-stone-500 text-center mt-3 flex items-center justify-center gap-1.5">
-                        <Lock className="w-3.5 h-3.5 text-[#2d524a]" />
+                      <p className="text-[11px] text-stone-500 dark:text-[#b0afa9] text-center mt-3 flex items-center justify-center gap-1.5">
+                        <Lock className="w-3.5 h-3.5 text-[#2d524a] dark:text-[#dfc17b]" />
                         <span>Suas informações são estritamente resguardadas pelo sigilo profissional da OAB.</span>
                       </p>
                     </div>
