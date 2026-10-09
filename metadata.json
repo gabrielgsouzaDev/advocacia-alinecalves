@@ -1,0 +1,6 @@
+{
+  "name": "Aline Calves Advocacia | Advocacia Litoral",
+  "description": "Escritório de advocacia com atuação em Direito Imobiliário, Previdenciário, Família, Consumidor e Cível. Atendimento humanizado 24h em Praia Grande e todo Brasil.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

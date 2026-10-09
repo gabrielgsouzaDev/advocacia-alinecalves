@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-sans: 'Montserrat', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --color-brand-primary: #2d524a;
+  --color-brand-primary-dark: #1b3731;
+  --color-brand-primary-light: #3d6b61;
+  --color-brand-gold: #c5a059;
+  --color-brand-gold-dark: #a9853e;
+  --color-brand-gold-light: #dfc17b;
+  --color-brand-canvas: #fbfcfb;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom smooth transitions and animations */
+@keyframes pulseSubtle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+@keyframes goldShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 3s ease-in-out infinite;
+}
+
+.gold-shimmer {
+  background: linear-gradient(90deg, #c5a059 0%, #fae49d 50%, #c5a059 100%);
+  background-size: 200% 100%;
+  animation: goldShimmer 6s infinite linear;
+}
+
+
