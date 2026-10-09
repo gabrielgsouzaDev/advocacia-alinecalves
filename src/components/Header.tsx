@@ -53,35 +53,35 @@ export const Header: React.FC = () => {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-extrabold text-base sm:text-lg text-[#1b3731] tracking-tight leading-tight group-hover:text-[#2d524a] transition-colors">
+                <span className="font-extrabold text-base sm:text-lg text-[#1b3731] dark:text-[#ececec] tracking-tight leading-tight group-hover:text-[#2d524a] dark:group-hover:text-[#dfc17b] transition-colors">
                   Aline Calves
                 </span>
-                <span className="text-[10px] font-bold tracking-[0.2em] text-[#a9853e] uppercase">
+                <span className="text-[10px] font-bold tracking-[0.2em] text-[#a9853e] dark:text-[#dfc17b] uppercase">
                   Advocacia & Consultoria
                 </span>
               </div>
             </a>
 
             {/* Desktop Navigation Links - Compact, 1-word clear labels */}
-            <nav className="hidden lg:flex items-center gap-8 text-[13px] font-bold text-stone-700">
-              <a href="#inicio" className="hover:text-[#1b3731] transition-colors relative py-1 group">
+            <nav className="hidden lg:flex items-center gap-8 text-[13px] font-bold text-stone-700 dark:text-stone-300">
+              <a href="#inicio" className="hover:text-[#1b3731] dark:hover:text-[#dfc17b] transition-colors relative py-1 group">
                 Início
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#c5a059] transition-all duration-300 group-hover:w-full" />
               </a>
-              <a href="#sobre" className="hover:text-[#1b3731] transition-colors relative py-1 group">
+              <a href="#sobre" className="hover:text-[#1b3731] dark:hover:text-[#dfc17b] transition-colors relative py-1 group">
                 Sobre
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#c5a059] transition-all duration-300 group-hover:w-full" />
               </a>
-              <a href="#atuacao" className="hover:text-[#1b3731] transition-colors relative py-1 group">
+              <a href="#atuacao" className="hover:text-[#1b3731] dark:hover:text-[#dfc17b] transition-colors relative py-1 group">
                 Atuação
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#c5a059] transition-all duration-300 group-hover:w-full" />
               </a>
-              <a href="#triagem" className="text-[#2d524a] hover:text-[#1b3731] transition-colors relative py-1 group flex items-center gap-1 font-bold">
+              <a href="#triagem" className="text-[#2d524a] dark:text-[#dfc17b] hover:text-[#1b3731] transition-colors relative py-1 group flex items-center gap-1 font-bold">
                 Triagem
                 <span className="w-1.5 h-1.5 rounded-full bg-[#c5a059]" />
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#c5a059] transition-all duration-300 group-hover:w-full" />
               </a>
-              <a href="#contato" className="hover:text-[#1b3731] transition-colors relative py-1 group">
+              <a href="#contato" className="hover:text-[#1b3731] dark:hover:text-[#dfc17b] transition-colors relative py-1 group">
                 Contato
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#c5a059] transition-all duration-300 group-hover:w-full" />
               </a>

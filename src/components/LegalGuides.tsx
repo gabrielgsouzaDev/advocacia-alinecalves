@@ -6,31 +6,31 @@ export const LegalGuides: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'loas' | 'divorcio'>('loas');
 
   return (
-    <section id="orientacoes" className="py-20 lg:py-28 bg-white border-b border-stone-200">
+    <section id="orientacoes" className="py-20 lg:py-28 bg-white dark:bg-[#1f1e1d] border-b border-stone-200 dark:border-[#383835]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div className="inline-block px-3.5 py-1 rounded-full bg-[#1b3731]/5 border border-[#1b3731]/15 text-[#1b3731] text-xs font-bold uppercase tracking-wider">
+          <div className="inline-block px-3.5 py-1 rounded-full bg-[#1b3731]/5 dark:bg-[#dfc17b]/10 border border-[#1b3731]/15 dark:border-[#dfc17b]/20 text-[#1b3731] dark:text-[#dfc17b] text-xs font-bold uppercase tracking-wider">
             Orientação Jurídica & Cidadania
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-[#1b3731] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-black text-[#1b3731] dark:text-[#fcfcfb] tracking-tight">
             Artigos e Guias Informativos
           </h2>
-          <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
+          <p className="text-stone-600 dark:text-[#b0afa9] text-sm sm:text-base leading-relaxed">
             Esclareça dúvidas essenciais sobre os seus direitos com informações técnicas, fundamentadas e de fácil compreensão elaboradas pelo nosso escritório.
           </p>
 
           {/* Tab Selector */}
           <div className="pt-4 flex justify-center">
-            <div className="inline-flex p-1.5 bg-stone-100 rounded-2xl border border-stone-200 max-w-md w-full sm:w-auto">
+            <div className="inline-flex p-1.5 bg-stone-100 dark:bg-[#262624] rounded-2xl border border-stone-200 dark:border-[#383835] max-w-md w-full sm:w-auto">
               <button
                 type="button"
                 onClick={() => setActiveTab('loas')}
                 className={`flex-1 sm:flex-initial px-6 py-3 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer ${
                   activeTab === 'loas'
-                    ? 'bg-[#1b3731] text-white shadow-sm'
-                    : 'text-stone-600 hover:text-stone-900'
+                    ? 'bg-[#1b3731] dark:bg-[#2d524a] text-white shadow-sm'
+                    : 'text-stone-600 dark:text-stone-300 hover:text-stone-900 dark:hover:text-white'
                 }`}
               >
                 <ShieldCheck className={`w-4 h-4 ${activeTab === 'loas' ? 'text-[#dfc17b]' : ''}`} />
@@ -41,8 +41,8 @@ export const LegalGuides: React.FC = () => {
                 onClick={() => setActiveTab('divorcio')}
                 className={`flex-1 sm:flex-initial px-6 py-3 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer ${
                   activeTab === 'divorcio'
-                    ? 'bg-[#1b3731] text-white shadow-sm'
-                    : 'text-stone-600 hover:text-stone-900'
+                    ? 'bg-[#1b3731] dark:bg-[#2d524a] text-white shadow-sm'
+                    : 'text-stone-600 dark:text-stone-300 hover:text-stone-900 dark:hover:text-white'
                 }`}
               >
                 <HeartHandshake className={`w-4 h-4 ${activeTab === 'divorcio' ? 'text-[#dfc17b]' : ''}`} />

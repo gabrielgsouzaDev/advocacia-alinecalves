@@ -32,7 +32,7 @@ export const MobileBottomNav: React.FC = () => {
   return (
     <nav
       aria-label="Navegação Rápida Mobile"
-      className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-t border-stone-200/90 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] px-2 py-1.5 transition-all"
+      className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 dark:bg-[#20201e]/95 backdrop-blur-xl border-t border-stone-200/90 dark:border-stone-700/80 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] px-2 py-1.5 transition-all"
     >
       <div className="max-w-md mx-auto grid grid-cols-5 items-center justify-items-center">
         {/* 1. Início */}
@@ -40,11 +40,11 @@ export const MobileBottomNav: React.FC = () => {
           href="#inicio"
           onClick={() => setActiveTab('inicio')}
           className={`flex flex-col items-center justify-center py-1 px-2 rounded-xl transition-colors ${
-            activeTab === 'inicio' ? 'text-[#1b3731]' : 'text-stone-400 hover:text-stone-700'
+            activeTab === 'inicio' ? 'text-[#1b3731] dark:text-[#dfc17b]' : 'text-stone-400 dark:text-stone-500 hover:text-stone-700'
           }`}
         >
-          <Home className={`w-5 h-5 ${activeTab === 'inicio' ? 'text-[#1b3731] stroke-[2.4]' : ''}`} />
-          <span className={`text-[10px] mt-0.5 font-bold ${activeTab === 'inicio' ? 'text-[#1b3731]' : 'font-medium'}`}>
+          <Home className={`w-5 h-5 ${activeTab === 'inicio' ? 'text-[#1b3731] dark:text-[#dfc17b] stroke-[2.4]' : ''}`} />
+          <span className={`text-[10px] mt-0.5 font-bold ${activeTab === 'inicio' ? 'text-[#1b3731] dark:text-[#dfc17b]' : 'font-medium'}`}>
             Início
           </span>
         </a>
@@ -54,11 +54,11 @@ export const MobileBottomNav: React.FC = () => {
           href="#sobre"
           onClick={() => setActiveTab('sobre')}
           className={`flex flex-col items-center justify-center py-1 px-2 rounded-xl transition-colors ${
-            activeTab === 'sobre' ? 'text-[#1b3731]' : 'text-stone-400 hover:text-stone-700'
+            activeTab === 'sobre' ? 'text-[#1b3731] dark:text-[#dfc17b]' : 'text-stone-400 dark:text-stone-500 hover:text-stone-700'
           }`}
         >
-          <UserCheck className={`w-5 h-5 ${activeTab === 'sobre' ? 'text-[#1b3731] stroke-[2.4]' : ''}`} />
-          <span className={`text-[10px] mt-0.5 font-bold ${activeTab === 'sobre' ? 'text-[#1b3731]' : 'font-medium'}`}>
+          <UserCheck className={`w-5 h-5 ${activeTab === 'sobre' ? 'text-[#1b3731] dark:text-[#dfc17b] stroke-[2.4]' : ''}`} />
+          <span className={`text-[10px] mt-0.5 font-bold ${activeTab === 'sobre' ? 'text-[#1b3731] dark:text-[#dfc17b]' : 'font-medium'}`}>
             Sobre
           </span>
         </a>
@@ -69,10 +69,10 @@ export const MobileBottomNav: React.FC = () => {
           onClick={() => setActiveTab('triagem')}
           className="flex flex-col items-center justify-center py-0.5 px-2 relative -top-2"
         >
-          <div className="w-11 h-11 rounded-full bg-[#1b3731] text-[#dfc17b] flex items-center justify-center shadow-md border-2 border-white transform active:scale-95 transition-transform">
+          <div className="w-11 h-11 rounded-full bg-[#1b3731] dark:bg-[#2d524a] text-[#dfc17b] flex items-center justify-center shadow-md border-2 border-white dark:border-[#20201e] transform active:scale-95 transition-transform">
             <FileCheck className="w-5 h-5 text-[#dfc17b]" />
           </div>
-          <span className="text-[10px] mt-0.5 font-extrabold text-[#1b3731]">
+          <span className="text-[10px] mt-0.5 font-extrabold text-[#1b3731] dark:text-[#dfc17b]">
             Triagem
           </span>
         </a>
@@ -82,11 +82,11 @@ export const MobileBottomNav: React.FC = () => {
           href="#atuacao"
           onClick={() => setActiveTab('atuacao')}
           className={`flex flex-col items-center justify-center py-1 px-2 rounded-xl transition-colors ${
-            activeTab === 'atuacao' ? 'text-[#1b3731]' : 'text-stone-400 hover:text-stone-700'
+            activeTab === 'atuacao' ? 'text-[#1b3731] dark:text-[#dfc17b]' : 'text-stone-400 dark:text-stone-500 hover:text-stone-700'
           }`}
         >
-          <Scale className={`w-5 h-5 ${activeTab === 'atuacao' ? 'text-[#1b3731] stroke-[2.4]' : ''}`} />
-          <span className={`text-[10px] mt-0.5 font-bold ${activeTab === 'atuacao' ? 'text-[#1b3731]' : 'font-medium'}`}>
+          <Scale className={`w-5 h-5 ${activeTab === 'atuacao' ? 'text-[#1b3731] dark:text-[#dfc17b] stroke-[2.4]' : ''}`} />
+          <span className={`text-[10px] mt-0.5 font-bold ${activeTab === 'atuacao' ? 'text-[#1b3731] dark:text-[#dfc17b]' : 'font-medium'}`}>
             Atuação
           </span>
         </a>

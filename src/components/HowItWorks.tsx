@@ -35,18 +35,18 @@ export const HowItWorks: React.FC = () => {
   ];
 
   return (
-    <section id="como-funciona" className="py-20 lg:py-28 bg-white border-b border-stone-200 relative overflow-hidden">
+    <section id="como-funciona" className="py-20 lg:py-28 bg-white dark:bg-[#1f1e1d] border-b border-stone-200 dark:border-[#383835] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-block px-3.5 py-1 rounded-full bg-[#1b3731]/5 border border-[#1b3731]/15 text-[#1b3731] text-xs font-bold uppercase tracking-wider">
+          <div className="inline-block px-3.5 py-1 rounded-full bg-[#1b3731]/5 dark:bg-[#dfc17b]/10 border border-[#1b3731]/15 dark:border-[#dfc17b]/20 text-[#1b3731] dark:text-[#dfc17b] text-xs font-bold uppercase tracking-wider">
             Processo de Trabalho Transparente
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-[#1b3731] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-black text-[#1b3731] dark:text-[#fcfcfb] tracking-tight">
             Como Funciona o Nosso Atendimento
           </h2>
-          <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
+          <p className="text-stone-600 dark:text-[#b0afa9] text-sm sm:text-base leading-relaxed">
             Eliminamos a incerteza e o juridiquês. Conheça as etapas claras desde a sua primeira dúvida até o desfecho favorável da sua causa.
           </p>
         </div>
@@ -63,29 +63,29 @@ export const HowItWorks: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                className="relative bg-stone-50/70 hover:bg-white rounded-3xl p-7 border border-stone-200 hover:border-[#1b3731]/30 transition-all duration-300 shadow-xs hover:shadow-[0_15px_30px_-10px_rgba(27,55,49,0.08)] flex flex-col justify-between"
+                className="relative bg-stone-50/70 dark:bg-[#262624] hover:bg-white dark:hover:bg-[#2c2b28] rounded-3xl p-7 border border-stone-200 dark:border-[#383835] hover:border-[#1b3731]/30 dark:hover:border-[#dfc17b]/30 transition-all duration-300 shadow-xs hover:shadow-[0_15px_30px_-10px_rgba(0,0,0,0.2)] flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">
-                    <span className="font-mono text-3xl font-black text-[#c5a059]">
+                    <span className="font-mono text-3xl font-black text-[#c5a059] dark:text-[#dfc17b]">
                       {step.number}
                     </span>
-                    <div className="p-3 rounded-2xl bg-[#1b3731]/5 text-[#1b3731] border border-stone-200/80">
-                      <Icon className="w-5 h-5 text-[#2d524a]" />
+                    <div className="p-3 rounded-2xl bg-[#1b3731]/5 dark:bg-[#dfc17b]/10 text-[#1b3731] dark:text-[#dfc17b] border border-stone-200/80 dark:border-[#383835]">
+                      <Icon className="w-5 h-5 text-[#2d524a] dark:text-[#dfc17b]" />
                     </div>
                   </div>
 
-                  <h3 className="text-base font-bold text-stone-900 mb-2 leading-snug">
+                  <h3 className="text-base font-bold text-stone-900 dark:text-[#fcfcfb] mb-2 leading-snug">
                     {step.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-stone-600 dark:text-[#b0afa9] leading-relaxed">
                     {step.description}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-stone-200/60 flex items-center gap-2 text-xs text-[#1b3731] font-semibold">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#c5a059]" />
+                <div className="mt-6 pt-4 border-t border-stone-200/60 dark:border-[#383835] flex items-center gap-2 text-xs text-[#1b3731] dark:text-[#dfc17b] font-semibold">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#c5a059] dark:text-[#dfc17b]" />
                   <span>Atendimento sem rodeios</span>
                 </div>
               </motion.div>
@@ -96,7 +96,7 @@ export const HowItWorks: React.FC = () => {
         {/* Guarantee Banner */}
         <motion.div
           whileHover={{ scale: 1.005, transition: { duration: 0.2 } }}
-          className="mt-14 bg-gradient-to-r from-[#1b3731] via-[#24453e] to-[#1b3731] text-white rounded-3xl p-7 sm:p-9 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-[0_20px_40px_-15px_rgba(27,55,49,0.2)] border border-[#2d524a]/80"
+          className="mt-14 bg-gradient-to-r from-[#1b3731] via-[#24453e] to-[#1b3731] dark:from-[#223934] dark:via-[#2a453f] dark:to-[#223934] text-white rounded-3xl p-7 sm:p-9 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)] border border-[#2d524a]/80 dark:border-[#3d6b61]"
         >
           <div className="space-y-1.5 text-center sm:text-left">
             <h4 className="text-lg sm:text-xl font-bold text-[#dfc17b]">

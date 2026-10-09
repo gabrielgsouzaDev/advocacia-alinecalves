@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-montserrat: 'Montserrat', sans-serif;
   --font-sans: 'Montserrat', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -17,6 +19,151 @@ html {
   font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Claude Dark Mode color palette (#1f1e1d / #262624) */
+html.dark {
+  background-color: #1f1e1d;
+  color: #f5f5f4;
+  color-scheme: dark;
+}
+
+/* Accessibility dynamic font scaling */
+html.text-size-sm {
+  font-size: 92%;
+}
+
+html.text-size-md {
+  font-size: 100%;
+}
+
+html.text-size-lg {
+  font-size: 112%;
+}
+
+/* ==========================================================================
+   CLAUDE DARK MODE CONTRAST & LEGIBILITY ARCHITECTURE
+   ========================================================================== */
+
+/* Main canvas & surfaces */
+.dark body {
+  background-color: #1f1e1d;
+  color: #f5f5f4;
+}
+
+/* Sections and main containers */
+.dark section.bg-white,
+.dark section[class*="bg-white"] {
+  background-color: #1f1e1d !important;
+  border-color: #383835 !important;
+}
+
+/* Base Cards & elevated surfaces */
+.dark .bg-white,
+.dark [class*="bg-white/"],
+.dark [class*="bg-white"] {
+  background-color: #272725 !important;
+  color: #f5f5f4;
+}
+
+/* Secondary light backgrounds (stone-50, stone-100, etc.) */
+.dark .bg-stone-50,
+.dark [class*="bg-stone-50"],
+.dark .bg-stone-100,
+.dark [class*="bg-stone-100"] {
+  background-color: #2e2e2b !important;
+}
+
+/* Inputs and interactive boxes */
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #262624 !important;
+  color: #f5f5f4 !important;
+  border-color: #444440 !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #9d9c98 !important;
+}
+
+/* TYPOGRAPHY CONTRAST IN DARK MODE - Maximum clarity */
+.dark .text-stone-900,
+.dark .text-stone-800,
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: #fcfcfb !important;
+}
+
+/* Primary text & titles that used deep green in light mode */
+.dark .text-\[\#1b3731\],
+.dark .text-\[\#2d524a\] {
+  color: #f2ede4 !important;
+}
+
+/* Secondary body copy, descriptions and paragraphs */
+.dark .text-stone-700,
+.dark .text-stone-600,
+.dark p,
+.dark span.text-stone-600,
+.dark p.text-stone-600,
+.dark p.text-stone-700 {
+  color: #d8d7d4 !important;
+}
+
+/* Tertiary text, captions and helper notes */
+.dark .text-stone-500,
+.dark span.text-stone-500,
+.dark p.text-stone-500,
+.dark .text-stone-400 {
+  color: #b0afa9 !important;
+}
+
+/* Accents and brand gold in dark mode */
+.dark .text-\[\#a9853e\],
+.dark .text-\[\#c5a059\],
+.dark .text-\[\#8c6b27\] {
+  color: #dfc17b !important;
+}
+
+/* Icon badges with dark background */
+.dark .bg-\[\#1b3731\]\/10,
+.dark .bg-\[\#2d524a\]\/10,
+.dark .bg-\[\#c5a059\]\/10,
+.dark .bg-\[\#c5a059\]\/15 {
+  background-color: rgba(223, 193, 123, 0.15) !important;
+}
+
+.dark .bg-\[\#1b3731\]\/10 .text-\[\#2d524a\],
+.dark .bg-\[\#1b3731\]\/10 svg,
+.dark .bg-\[\#c5a059\]\/15 svg {
+  color: #dfc17b !important;
+}
+
+/* Borders in dark mode */
+.dark .border-stone-200,
+.dark [class*="border-stone-200"],
+.dark .border-stone-300,
+.dark [class*="border-stone-300"],
+.dark .border-stone-100 {
+  border-color: #3c3c39 !important;
+}
+
+/* Sticky Header and Mobile Bottom Navigation */
+.dark header {
+  background-color: rgba(31, 30, 29, 0.94) !important;
+  border-color: #383835 !important;
+}
+
+.dark nav[aria-label="Navegação Rápida Mobile"] {
+  background-color: rgba(31, 30, 29, 0.96) !important;
+  border-color: #383835 !important;
 }
 
 /* Custom smooth transitions and animations */

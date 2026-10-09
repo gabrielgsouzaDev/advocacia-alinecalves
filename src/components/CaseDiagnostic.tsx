@@ -105,18 +105,18 @@ export const CaseDiagnostic: React.FC = () => {
   };
 
   return (
-    <section id="triagem" className="py-20 lg:py-28 bg-[#fbfcfb] border-b border-stone-200 relative overflow-hidden">
+    <section id="triagem" className="py-20 lg:py-28 bg-[#fbfcfb] dark:bg-[#1f1e1d] border-b border-stone-200 dark:border-[#383835] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div className="inline-block px-3.5 py-1 rounded-full bg-[#c5a059]/15 border border-[#c5a059]/30 text-[#8c6b27] text-xs font-bold uppercase tracking-wider">
+          <div className="inline-block px-3.5 py-1 rounded-full bg-[#c5a059]/15 dark:bg-[#dfc17b]/15 border border-[#c5a059]/30 dark:border-[#dfc17b]/30 text-[#8c6b27] dark:text-[#dfc17b] text-xs font-bold uppercase tracking-wider">
             Assistente Interativo de Triagem Prévia
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-[#1b3731] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-black text-[#1b3731] dark:text-[#fcfcfb] tracking-tight">
             Descubra o Caminho Jurídico para o Seu Caso
           </h2>
-          <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
+          <p className="text-stone-600 dark:text-[#b0afa9] text-sm sm:text-base leading-relaxed">
             Selecione as informações fundamentais em 3 etapas para receber um direcionamento sob medida e saber quais documentos já deve providenciar.
           </p>
         </div>
@@ -127,18 +127,18 @@ export const CaseDiagnostic: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-white rounded-3xl p-6 sm:p-10 border border-stone-200 shadow-[0_15px_40px_-10px_rgba(27,55,49,0.08)] max-w-4xl mx-auto"
+          className="bg-white dark:bg-[#262624] rounded-3xl p-6 sm:p-10 border border-stone-200 dark:border-[#383835] shadow-[0_15px_40px_-10px_rgba(0,0,0,0.25)] max-w-4xl mx-auto"
         >
           
           <div className="space-y-9">
             {/* Step 1: Área */}
             <div>
               <div className="flex items-center justify-between mb-3.5">
-                <label className="text-xs font-bold text-stone-800 uppercase tracking-wider flex items-center gap-2">
-                  <span className="w-5 h-5 rounded-full bg-[#1b3731] text-white flex items-center justify-center font-mono text-[10px]">1</span>
+                <label className="text-xs font-bold text-stone-800 dark:text-[#fcfcfb] uppercase tracking-wider flex items-center gap-2">
+                  <span className="w-5 h-5 rounded-full bg-[#1b3731] dark:bg-[#dfc17b] text-white dark:text-[#1b3731] flex items-center justify-center font-mono text-[10px]">1</span>
                   Qual é a matéria da sua necessidade?
                 </label>
-                <span className="text-[11px] font-semibold text-[#a9853e]">Etapa 1 de 3</span>
+                <span className="text-[11px] font-semibold text-[#a9853e] dark:text-[#dfc17b]">Etapa 1 de 3</span>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5">
@@ -152,14 +152,14 @@ export const CaseDiagnostic: React.FC = () => {
                       onClick={() => setSelectedArea(key)}
                       className={`p-3.5 rounded-2xl border text-left text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${
                         isSelected
-                          ? 'bg-[#1b3731] text-white border-[#1b3731] shadow-sm transform -translate-y-0.5'
-                          : 'bg-stone-50 hover:bg-stone-100 text-stone-800 border-stone-200/90'
+                          ? 'bg-[#1b3731] dark:bg-[#2d524a] text-white border-[#1b3731] dark:border-[#3d6b61] shadow-sm transform -translate-y-0.5'
+                          : 'bg-stone-50 dark:bg-[#20201e] hover:bg-stone-100 dark:hover:bg-[#2c2b28] text-stone-800 dark:text-[#f5f5f4] border-stone-200/90 dark:border-[#383835]'
                       }`}
                     >
                       <div className="flex items-center gap-2.5">
                         <CheckCircle2
                           className={`w-4 h-4 shrink-0 ${
-                            isSelected ? 'text-[#dfc17b]' : 'text-stone-300'
+                            isSelected ? 'text-[#dfc17b]' : 'text-stone-300 dark:text-stone-600'
                           }`}
                         />
                         <span className="line-clamp-2 leading-snug">{item.label}</span>
@@ -173,11 +173,11 @@ export const CaseDiagnostic: React.FC = () => {
             {/* Step 2: Situação */}
             <div>
               <div className="flex items-center justify-between mb-3.5">
-                <label className="text-xs font-bold text-stone-800 uppercase tracking-wider flex items-center gap-2">
-                  <span className="w-5 h-5 rounded-full bg-[#1b3731] text-white flex items-center justify-center font-mono text-[10px]">2</span>
+                <label className="text-xs font-bold text-stone-800 dark:text-[#fcfcfb] uppercase tracking-wider flex items-center gap-2">
+                  <span className="w-5 h-5 rounded-full bg-[#1b3731] dark:bg-[#dfc17b] text-white dark:text-[#1b3731] flex items-center justify-center font-mono text-[10px]">2</span>
                   Qual é o momento atual da demanda?
                 </label>
-                <span className="text-[11px] font-semibold text-[#a9853e]">Etapa 2 de 3</span>
+                <span className="text-[11px] font-semibold text-[#a9853e] dark:text-[#dfc17b]">Etapa 2 de 3</span>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
@@ -190,14 +190,14 @@ export const CaseDiagnostic: React.FC = () => {
                       onClick={() => setCurrentStatus(st.id)}
                       className={`p-3.5 rounded-2xl border text-left text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer ${
                         isSelected
-                          ? 'bg-[#1b3731] text-white border-[#1b3731] shadow-sm transform -translate-y-0.5'
-                          : 'bg-stone-50 hover:bg-stone-100 text-stone-800 border-stone-200/90'
+                          ? 'bg-[#1b3731] dark:bg-[#2d524a] text-white border-[#1b3731] dark:border-[#3d6b61] shadow-sm transform -translate-y-0.5'
+                          : 'bg-stone-50 dark:bg-[#20201e] hover:bg-stone-100 dark:hover:bg-[#2c2b28] text-stone-800 dark:text-[#f5f5f4] border-stone-200/90 dark:border-[#383835]'
                       }`}
                     >
                       <div className="flex items-center gap-2.5">
                         <CheckCircle2
                           className={`w-4 h-4 shrink-0 ${
-                            isSelected ? 'text-[#dfc17b]' : 'text-stone-300'
+                            isSelected ? 'text-[#dfc17b]' : 'text-stone-300 dark:text-stone-600'
                           }`}
                         />
                         <span className="leading-snug">{st.label}</span>
@@ -211,11 +211,11 @@ export const CaseDiagnostic: React.FC = () => {
             {/* Step 3: Formato */}
             <div>
               <div className="flex items-center justify-between mb-3.5">
-                <label className="text-xs font-bold text-stone-800 uppercase tracking-wider flex items-center gap-2">
-                  <span className="w-5 h-5 rounded-full bg-[#1b3731] text-white flex items-center justify-center font-mono text-[10px]">3</span>
+                <label className="text-xs font-bold text-stone-800 dark:text-[#fcfcfb] uppercase tracking-wider flex items-center gap-2">
+                  <span className="w-5 h-5 rounded-full bg-[#1b3731] dark:bg-[#dfc17b] text-white dark:text-[#1b3731] flex items-center justify-center font-mono text-[10px]">3</span>
                   Como prefere ser atendido?
                 </label>
-                <span className="text-[11px] font-semibold text-[#a9853e]">Etapa 3 de 3</span>
+                <span className="text-[11px] font-semibold text-[#a9853e] dark:text-[#dfc17b]">Etapa 3 de 3</span>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -224,12 +224,12 @@ export const CaseDiagnostic: React.FC = () => {
                   onClick={() => setPreferredFormat('online')}
                   className={`p-4 rounded-2xl border text-left transition-all duration-200 cursor-pointer ${
                     preferredFormat === 'online'
-                      ? 'bg-[#1b3731] text-white border-[#1b3731] shadow-sm'
-                      : 'bg-stone-50 hover:bg-stone-100 text-stone-800 border-stone-200/90'
+                      ? 'bg-[#1b3731] dark:bg-[#2d524a] text-white border-[#1b3731] dark:border-[#3d6b61] shadow-sm'
+                      : 'bg-stone-50 dark:bg-[#20201e] hover:bg-stone-100 dark:hover:bg-[#2c2b28] text-stone-800 dark:text-[#f5f5f4] border-stone-200/90 dark:border-[#383835]'
                   }`}
                 >
                   <p className="font-bold text-sm">Atendimento 100% Online</p>
-                  <p className="text-xs opacity-80 mt-1 leading-relaxed">
+                  <p className="text-xs opacity-80 mt-1 leading-relaxed text-stone-600 dark:text-[#b0afa9]">
                     Via WhatsApp ou videoconferência segura, válido para qualquer cidade do Brasil.
                   </p>
                 </button>
@@ -239,12 +239,12 @@ export const CaseDiagnostic: React.FC = () => {
                   onClick={() => setPreferredFormat('presencial')}
                   className={`p-4 rounded-2xl border text-left transition-all duration-200 cursor-pointer ${
                     preferredFormat === 'presencial'
-                      ? 'bg-[#1b3731] text-white border-[#1b3731] shadow-sm'
-                      : 'bg-stone-50 hover:bg-stone-100 text-stone-800 border-stone-200/90'
+                      ? 'bg-[#1b3731] dark:bg-[#2d524a] text-white border-[#1b3731] dark:border-[#3d6b61] shadow-sm'
+                      : 'bg-stone-50 dark:bg-[#20201e] hover:bg-stone-100 dark:hover:bg-[#2c2b28] text-stone-800 dark:text-[#f5f5f4] border-stone-200/90 dark:border-[#383835]'
                   }`}
                 >
                   <p className="font-bold text-sm">Presencial em Praia Grande/SP</p>
-                  <p className="text-xs opacity-80 mt-1 leading-relaxed">
+                  <p className="text-xs opacity-80 mt-1 leading-relaxed text-stone-600 dark:text-[#b0afa9]">
                     Em nosso escritório na Av. Júlio Prestes de Albuquerque, 444, Nova Mirim.
                   </p>
                 </button>
@@ -259,14 +259,14 @@ export const CaseDiagnostic: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-                className="p-6 sm:p-7 rounded-2xl bg-stone-50 border border-stone-200 space-y-4"
+                className="p-6 sm:p-7 rounded-2xl bg-stone-50 dark:bg-[#20201e] border border-stone-200 dark:border-[#383835] space-y-4"
               >
                 <div className="flex items-center justify-between">
-                  <h4 className="font-bold text-sm text-[#1b3731] flex items-center gap-2">
-                    <FileCheck className="w-4 h-4 text-[#a9853e]" />
+                  <h4 className="font-bold text-sm text-[#1b3731] dark:text-[#fcfcfb] flex items-center gap-2">
+                    <FileCheck className="w-4 h-4 text-[#a9853e] dark:text-[#dfc17b]" />
                     <span>Checklist de Documentos Recomendados para a 1ª Análise:</span>
                   </h4>
-                  <span className="text-[11px] font-mono text-stone-500 bg-white px-2.5 py-0.5 rounded-full border border-stone-200">
+                  <span className="text-[11px] font-mono text-stone-500 dark:text-[#dfc17b] bg-white dark:bg-[#262624] px-2.5 py-0.5 rounded-full border border-stone-200 dark:border-[#383835]">
                     {currentAreaObj.recommendedDocs.length} itens sugeridos
                   </span>
                 </div>
@@ -275,9 +275,9 @@ export const CaseDiagnostic: React.FC = () => {
                   {currentAreaObj.recommendedDocs.map((doc, idx) => (
                     <div
                       key={idx}
-                      className="p-3 rounded-xl bg-white border border-stone-200/80 text-xs text-stone-700 flex items-start gap-2.5 shadow-xs"
+                      className="p-3 rounded-xl bg-white dark:bg-[#262624] border border-stone-200/80 dark:border-[#383835] text-xs text-stone-700 dark:text-[#d8d7d4] flex items-start gap-2.5 shadow-xs"
                     >
-                      <CheckCircle2 className="w-3.5 h-3.5 text-[#c5a059] shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#c5a059] dark:text-[#dfc17b] shrink-0 mt-0.5" />
                       <span className="leading-snug">{doc}</span>
                     </div>
                   ))}

@@ -167,31 +167,31 @@ export const PracticeAreas: React.FC = () => {
   const activeAreaObj = areas.find((a) => a.id === selectedArea) || areas[0];
 
   return (
-    <section id="atuacao" className="py-20 lg:py-28 bg-[#fbfcfb] border-b border-stone-200">
+    <section id="atuacao" className="py-20 lg:py-28 bg-[#fbfcfb] dark:bg-[#1f1e1d] border-b border-stone-200 dark:border-[#383835]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div className="inline-block px-3.5 py-1 rounded-full bg-[#1b3731]/5 border border-[#1b3731]/15 text-[#1b3731] text-xs font-bold uppercase tracking-wider">
+          <div className="inline-block px-3.5 py-1 rounded-full bg-[#1b3731]/5 dark:bg-[#dfc17b]/10 border border-[#1b3731]/15 dark:border-[#dfc17b]/20 text-[#1b3731] dark:text-[#dfc17b] text-xs font-bold uppercase tracking-wider">
             Corpo Jurídico Multidisciplinar
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-[#1b3731] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-black text-[#1b3731] dark:text-[#fcfcfb] tracking-tight">
             ÁREAS DE ATUAÇÃO
           </h2>
-          <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
+          <p className="text-stone-600 dark:text-[#b0afa9] text-sm sm:text-base leading-relaxed">
             Oferecemos suporte jurídico integral com advogados especialistas em cada ramo, assegurando solidez técnica, confidencialidade e respostas céleres.
           </p>
 
           {/* Quick search input */}
           <div className="pt-2 max-w-md mx-auto">
             <div className="relative">
-              <Search className="w-4 h-4 text-stone-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+              <Search className="w-4 h-4 text-stone-400 dark:text-stone-500 absolute left-3.5 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
                 placeholder="Busque por divórcio, usucapião, INSS, multas, contratos..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 text-xs sm:text-sm bg-white border border-stone-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1b3731] focus:border-transparent transition-all shadow-xs placeholder:text-stone-400"
+                className="w-full pl-10 pr-4 py-2.5 text-xs sm:text-sm bg-white dark:bg-[#262624] border border-stone-300 dark:border-[#444440] text-stone-900 dark:text-[#f5f5f4] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1b3731] dark:focus:ring-[#dfc17b] focus:border-transparent transition-all shadow-xs placeholder:text-stone-400 dark:placeholder:text-stone-500"
               />
             </div>
           </div>
@@ -211,14 +211,14 @@ export const PracticeAreas: React.FC = () => {
                   onClick={() => setSelectedArea(area.id)}
                   className={`w-full text-left p-4 rounded-2xl transition-all duration-200 flex items-center justify-between border cursor-pointer ${
                     isSelected
-                      ? 'bg-[#1b3731] text-white border-[#1b3731] shadow-[0_10px_25px_-5px_rgba(27,55,49,0.25)] transform translate-x-1'
-                      : 'bg-white hover:bg-stone-50 text-stone-800 border-stone-200 shadow-xs'
+                      ? 'bg-[#1b3731] dark:bg-[#2d524a] text-white border-[#1b3731] dark:border-[#3d6b61] shadow-[0_10px_25px_-5px_rgba(0,0,0,0.3)] transform translate-x-1'
+                      : 'bg-white dark:bg-[#262624] hover:bg-stone-50 dark:hover:bg-[#2e2e2b] text-stone-800 dark:text-[#f5f5f4] border-stone-200 dark:border-[#383835] shadow-xs'
                   }`}
                 >
                   <div className="flex items-center gap-3.5">
                     <div
                       className={`p-2.5 rounded-xl transition-colors ${
-                        isSelected ? 'bg-white/10 text-[#dfc17b]' : 'bg-[#1b3731]/5 text-[#1b3731]'
+                        isSelected ? 'bg-white/10 text-[#dfc17b]' : 'bg-[#1b3731]/5 dark:bg-[#dfc17b]/10 text-[#1b3731] dark:text-[#dfc17b]'
                       }`}
                     >
                       <Icon className="w-5 h-5" />
@@ -227,7 +227,7 @@ export const PracticeAreas: React.FC = () => {
                       <p className="font-bold text-sm sm:text-base leading-snug">{area.name}</p>
                       <p
                         className={`text-xs line-clamp-1 mt-0.5 ${
-                          isSelected ? 'text-stone-300' : 'text-stone-500'
+                          isSelected ? 'text-stone-300 dark:text-stone-200' : 'text-stone-500 dark:text-[#b0afa9]'
                         }`}
                       >
                         {area.tagline}
@@ -240,8 +240,8 @@ export const PracticeAreas: React.FC = () => {
                       <span
                         className={`text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider ${
                           isSelected
-                            ? 'bg-[#c5a059] text-[#1b3731]'
-                            : 'bg-[#1b3731]/10 text-[#1b3731]'
+                            ? 'bg-[#c5a059] dark:bg-[#dfc17b] text-[#1b3731]'
+                            : 'bg-[#1b3731]/10 dark:bg-[#dfc17b]/20 text-[#1b3731] dark:text-[#dfc17b]'
                         }`}
                       >
                         {area.badge}
@@ -249,7 +249,7 @@ export const PracticeAreas: React.FC = () => {
                     )}
                     <ArrowRight
                       className={`w-4 h-4 transition-transform duration-200 ${
-                        isSelected ? 'text-[#dfc17b] translate-x-1' : 'text-stone-400'
+                        isSelected ? 'text-[#dfc17b] translate-x-1' : 'text-stone-400 dark:text-stone-500'
                       }`}
                     />
                   </div>
@@ -267,28 +267,28 @@ export const PracticeAreas: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-                className="bg-white rounded-3xl p-6 sm:p-9 border border-stone-200 shadow-[0_15px_35px_-10px_rgba(27,55,49,0.06)] relative overflow-hidden"
+                className="bg-white dark:bg-[#262624] rounded-3xl p-6 sm:p-9 border border-stone-200 dark:border-[#383835] shadow-[0_15px_35px_-10px_rgba(0,0,0,0.2)] relative overflow-hidden"
               >
-                <div className="absolute top-0 right-0 w-40 h-40 bg-[#1b3731]/5 rounded-bl-full pointer-events-none" />
+                <div className="absolute top-0 right-0 w-40 h-40 bg-[#1b3731]/5 dark:bg-[#dfc17b]/5 rounded-bl-full pointer-events-none" />
 
-                <div className="flex items-center gap-4 text-[#1b3731]">
-                  <div className="p-3 bg-[#1b3731]/5 rounded-2xl text-[#1b3731]">
-                    {React.createElement(activeAreaObj.icon, { className: 'w-8 h-8 text-[#1b3731]' })}
+                <div className="flex items-center gap-4 text-[#1b3731] dark:text-[#fcfcfb]">
+                  <div className="p-3 bg-[#1b3731]/5 dark:bg-[#dfc17b]/10 rounded-2xl text-[#1b3731] dark:text-[#dfc17b]">
+                    {React.createElement(activeAreaObj.icon, { className: 'w-8 h-8 text-[#1b3731] dark:text-[#dfc17b]' })}
                   </div>
                   <div>
-                    <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1b3731] leading-tight">
+                    <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1b3731] dark:text-[#fcfcfb] leading-tight">
                       {activeAreaObj.name}
                     </h3>
-                    <p className="text-xs font-semibold text-[#a9853e] mt-0.5 uppercase tracking-wider">
+                    <p className="text-xs font-semibold text-[#a9853e] dark:text-[#dfc17b] mt-0.5 uppercase tracking-wider">
                       {activeAreaObj.tagline}
                     </p>
                   </div>
                 </div>
 
-                <div className="w-full h-px bg-stone-100 my-6" />
+                <div className="w-full h-px bg-stone-100 dark:bg-[#383835] my-6" />
 
                 <div>
-                  <h4 className="text-xs font-bold text-stone-700 uppercase tracking-wider mb-4">
+                  <h4 className="text-xs font-bold text-stone-700 dark:text-[#d8d7d4] uppercase tracking-wider mb-4">
                     Serviços e Demandas Abrangidas com Assessoria Completa:
                   </h4>
 
@@ -296,9 +296,9 @@ export const PracticeAreas: React.FC = () => {
                     {activeAreaObj.items.map((item, idx) => (
                       <div
                         key={idx}
-                        className="p-3.5 rounded-xl bg-stone-50 border border-stone-200/70 flex items-start gap-2.5 text-xs sm:text-sm text-stone-700 hover:border-[#1b3731]/30 hover:bg-white transition-all"
+                        className="p-3.5 rounded-xl bg-stone-50 dark:bg-[#20201e] border border-stone-200/70 dark:border-[#383835] flex items-start gap-2.5 text-xs sm:text-sm text-stone-700 dark:text-[#d8d7d4] hover:border-[#1b3731]/30 dark:hover:border-[#dfc17b]/30 hover:bg-white dark:hover:bg-[#2c2b28] transition-all"
                       >
-                        <CheckCircle2 className="w-4 h-4 text-[#c5a059] shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 text-[#c5a059] dark:text-[#dfc17b] shrink-0 mt-0.5" />
                         <span className="leading-snug">{item}</span>
                       </div>
                     ))}
@@ -306,10 +306,10 @@ export const PracticeAreas: React.FC = () => {
                 </div>
 
                 {/* Consultation CTA for this area */}
-                <div className="mt-8 pt-6 border-t border-stone-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="mt-8 pt-6 border-t border-stone-100 dark:border-[#383835] flex flex-col sm:flex-row items-center justify-between gap-4">
                   <div>
-                    <p className="text-xs text-stone-500 font-medium">Precisa de orientação jurídica neste ramo?</p>
-                    <p className="text-sm font-bold text-[#1b3731]">
+                    <p className="text-xs text-stone-500 dark:text-[#b0afa9] font-medium">Precisa de orientação jurídica neste ramo?</p>
+                    <p className="text-sm font-bold text-[#1b3731] dark:text-[#fcfcfb]">
                       Atendimento direto com a equipe titular
                     </p>
                   </div>
@@ -320,7 +320,7 @@ export const PracticeAreas: React.FC = () => {
                     )}.`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#1b3731] hover:bg-[#2d524a] text-white font-bold text-sm transition-all shadow-sm hover:shadow-md"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#1b3731] dark:bg-[#2d524a] hover:bg-[#2d524a] dark:hover:bg-[#3d6b61] text-white font-bold text-sm transition-all shadow-sm hover:shadow-md"
                   >
                     <span>Consultar sobre {activeAreaObj.name}</span>
                     <ArrowRight className="w-4 h-4 text-[#dfc17b]" />
